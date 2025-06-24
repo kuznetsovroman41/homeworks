@@ -4,7 +4,7 @@ from .forms import TaskForm
 from django.shortcuts import get_object_or_404
 def task_list(request):
     tasks = Task.objects.all()
-    return render(request, 'webapp/task_list.html', {'tasks': tasks})
+    return render(request, 'task_list.html', {'tasks': tasks})
 
 
 def add_task(request):
@@ -15,7 +15,7 @@ def add_task(request):
             return redirect('task_list')
     else:
         form = TaskForm()
-    return render(request, 'webapp/add_task.html', {'form': form})
+    return render(request, 'add_task.html', {'form': form})
 
 
 def delete_task(request, task_id):

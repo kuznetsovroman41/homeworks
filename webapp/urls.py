@@ -1,8 +1,7 @@
 from django.urls import path
-
-from webapp.views import index, create_article
+from .views import task_list
 
 urlpatterns = [
-    path('', index),
-    path('add-article/', create_article),
+    path('', task_list, name='task_list'),
 ]
+

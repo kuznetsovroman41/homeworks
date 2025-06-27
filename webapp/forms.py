@@ -10,8 +10,9 @@ STATUS_CHOICES = [
 class TaskForm(forms.ModelForm):
     status = forms.ChoiceField(choices=STATUS_CHOICES)
     due_date = forms.CharField(required=False, widget=forms.TextInput(attrs={'placeholder': 'YYYY-MM-DD'}))
+    details = forms.CharField(widget=forms.Textarea, required=False)
 
     class Meta:
         model = Task
-        fields = ['description', 'status', 'due_date']
+        fields = ['description', 'details', 'status', 'due_date']
 

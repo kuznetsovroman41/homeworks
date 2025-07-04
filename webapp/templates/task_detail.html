@@ -2,7 +2,7 @@
 {% block title %}Детали задачи{% endblock %}
 {% block content %}
     <h1>{{ task.description }}</h1>
-    <p><strong>Статус:</strong> {{ task.status }}</p>
+    <p><strong>Статус:</strong> {{ task.get_status_display }}</p>
     <p><strong>Дата выполнения:</strong> {{ task.due_date }}</p>
     <p><strong>Подробное описание:</strong></p>
     <pre style="white-space: pre-wrap">{{ task.details }}</pre>

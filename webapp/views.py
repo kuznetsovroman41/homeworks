@@ -39,3 +39,4 @@ def delete_task(request, pk):
     return render(request, 'delete_task.html', {'task': task})
 
 
+
